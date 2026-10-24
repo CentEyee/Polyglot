@@ -1,0 +1,9 @@
+[
+  {
+    "name": "c-satadd-local",
+    "repo_url": "examples/c-satadd",
+    "ref": "",
+    "instruction": "Migrate this C saturating-arithmetic library to safe idiomatic Rust. Keep INT_MAX/INT_MIN clamp behavior.",
+    "open_pr": false
+  }
+]
