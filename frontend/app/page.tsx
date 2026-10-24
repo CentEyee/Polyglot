@@ -83,7 +83,7 @@ export default function Home() {
   const [report, setReport] = useState<any>(null);
   const [diff, setDiff] = useState("");
   const [pairs, setPairs] = useState<Pair[]>([]);
-  const [waves, setWaves] = State<any[][]>([]);
+  const [waves, setWaves] = useState<any[][]>([]);
   const [tab, setTab] = useState<"pairs" | "diff" | "sigs">("pairs");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
