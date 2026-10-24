@@ -234,7 +234,7 @@ export default function Home() {
         <p className={health?.ok && health?.token_factory ? "health ok" : "health"}>
           API {health?.ok ? "up" : "down"} · Token Factory {health?.token_factory ? "key loaded" : "missing NEBIUS_API_KEY"} ·
           Tavily {health?.tavily ? "on" : "off"} · GitHub {health?.github ? "on" : "off"}
-          {" · "}<button type="button" onClick={useExample} style={{ background: "none", border: 0, color: var(--nvidia-green), cursor: "pointer", padding: 0 }}>Load bundled satadd example</button>
+          {" · "}<button type="button" onClick={useExample} style={{ background: "none", border: 0, color: "var(--nvidia-green)", cursor: "pointer", padding: 0 }}>Load bundled satadd example</button>
         </p>
 
         {history.length > 0 && (
