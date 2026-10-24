@@ -292,7 +292,7 @@ export default function Home() {
                         target="_blank"
                         rel="noreferrer"
                         style={{
-                          color: var(--nvidia-green),
+                          color: "var(--nvidia-green)",
                           fontSize: 11,
                           marginLeft: 6,
                         }}
