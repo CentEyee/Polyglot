@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 :root {
-  --bg: #0c1208;
-  --bg-2: #121a0d;
-  --panel: #171f12;
-  --ink: #e8f2d8;
-  --muted: #8fa07a;
-  --line: #2a3a1e;
-  --lime: #d6ff3f;
-  --lime-dim: #9bb82a;
-  --add: #7dff9a;
-  --add-bg: #14301c;
-  --del: #ff8b7a;
+  --bg: #0d0f0c;
+  --bg-2: #1a1d19;
+  --panel: #1e2220;
+  --ink: #e8e8e0;
+  --muted: #6b7a6a;
+  --line: #2a3a28;
+  --nvidia-green: #2d5a2e;
+  --nvidia-green-dim: #254527;
+  --add: #387e40;
+  --add-bg: #1a3a22;
+  --del: #7a3a30;
   --del-bg: #3a1614;
-  --warn: #ffd36a;
+  --warn: #c4a000;
   --warn-bg: #3a2e10;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
@@ -22,49 +22,49 @@
 html, body { margin: 0; min-height: 100%; }
 body {
   background:
-    radial-gradient(1200px 500px at 10% -10%, #1c2a10 0%, transparent 55%),
+    radial-gradient(1200px 500px at 10% -10%, #0d1a0d 0%, transparent 55%),
     var(--bg);
   color: var(--ink);
   font: 15px/1.5 "IBM Plex Sans", system-ui, sans-serif;
 }
-a { color: var(--lime); }
+a { color: var(--nvidia-green); }
 button, input, textarea, select { font: inherit; color: inherit; }
 
-.shell { max-width: 1280px; margin: 0 auto; padding: 28px 20px 80px; }
+.shell { max-width: 1280px; margin: 0 auto; padding: 20px; }
 
 .hero {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 28px;
-  align-items: end;
-  margin-bottom: 28px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
 }
 .kicker {
-  color: var(--lime);
+  color: var(--nvidia-green);
   font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 0 8px;
 }
-h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 8px; }
-.sub { color: var(--muted); margin: 0; max-width: 58ch; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 8px; }
+.sub { color: var(--muted); margin: 0; max-width: 60ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .chip {
   border: 1px solid var(--line);
   background: var(--panel);
-  padding: 6px 10px;
+  padding: 5px 8px;
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
 }
-.chip b { color: var(--lime); font-weight: 600; }
+.chip b { color: var(--nvidia-green); font-weight: 600; }
 
 .panel {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 18px;
+  padding: 20px;
 }
 form.panel { display: grid; gap: 12px; grid-template-columns: 2fr 1fr auto; align-items: end; }
 form .wide { grid-column: 1 / -1; }
@@ -76,11 +76,11 @@ input[type=text], textarea {
   padding: 10px 12px;
 }
 input:focus-visible, button:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--lime); outline-offset: 1px;
+  outline: 2px solid var(--nvidia-green); outline-offset: 1px;
 }
 .check { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 13px; }
 button.go {
-  background: var(--lime);
+  background: var(--nvidia-green);
   color: #111;
   font-weight: 700;
   border: 0;
@@ -92,7 +92,7 @@ button.go:disabled { opacity: 0.55; cursor: default; }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -104,25 +104,25 @@ button.go:disabled { opacity: 0.55; cursor: default; }
 .stat b { display: block; font-size: 20px; font-weight: 600; }
 .stat span { color: var(--muted); font-size: 12px; }
 
-.layout { display: grid; grid-template-columns: 320px 1fr; gap: 16px; margin-top: 16px; }
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 20px; margin-top: 20px; }
 @media (max-width: 960px) {
   .hero, form.panel, .layout, .split { grid-template-columns: 1fr; }
   .chips { justify-content: flex-start; }
 }
 
-.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.timeline li { padding-left: 12px; border-left: 3px solid var(--line); font-size: 14px; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.timeline li { padding-left: 10px; border-left: 3px solid var(--line); font-size: 13px; }
 .timeline li.ok { border-color: var(--add); }
 .timeline li.bad { border-color: var(--del); }
 .timeline li.warn { border-color: var(--warn); }
-.timeline small { display: block; color: var(--muted); font-family: var(--mono); font-size: 11px; }
+.timeline small { display: block; color: var(--muted); font-family: var(--mono); font-size: 10px; }
 
 .tabs { display: flex; gap: 6px; margin-bottom: 12px; }
 .tabs button {
   background: transparent; border: 1px solid var(--line); color: var(--muted);
   border-radius: 999px; padding: 6px 12px; cursor: pointer;
 }
-.tabs button.on { border-color: var(--lime); color: var(--lime); }
+.tabs button.on { border-color: var(--nvidia-green); color: var(--nvidia-green); }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .codehead {
@@ -142,7 +142,7 @@ pre.code, pre.diff {
 }
 .diff .a { background: var(--add-bg); color: var(--add); }
 .diff .d { background: var(--del-bg); color: var(--del); }
-.diff .h { color: var(--lime); }
+.diff .h { color: var(--nvidia-green); }
 .diff .f { color: var(--muted); }
 
 table.sig { width: 100%; border-collapse: collapse; font-size: 13px; }
@@ -152,34 +152,88 @@ table.sig th, table.sig td {
 }
 table.sig th { color: var(--muted); font-weight: 500; font-family: inherit; }
 
-.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
 .badge.success { background: var(--add-bg); color: var(--add); }
 .badge.partial { background: var(--warn-bg); color: var(--warn); }
 .badge.failed { background: var(--del-bg); color: var(--del); }
 
-.waves { display: flex; flex-wrap: wrap; gap: 8px; }
+.waves { display: flex; flex-wrap: wrap; gap: 6px; }
 .wave {
-  border: 1px dashed var(--line); border-radius: 8px; padding: 8px 10px; min-width: 140px;
+  border: 1px dashed var(--line); border-radius: 8px; padding: 6px 8px; min-width: 120px;
 }
-.wave strong { display: block; font-size: 11px; color: var(--lime); font-family: var(--mono); }
-.wave span { font-size: 12px; color: var(--muted); }
+.wave strong { display: block; font-size: 10px; color: var(--nvidia-green); font-family: var(--mono); }
+.wave span { font-size: 11px; color: var(--muted); }
 
 .alert { color: var(--del); }
-.health { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.health { font-size: 11px; color: var(--muted); margin-top: 6px; }
 .health.ok { color: var(--add); }
 
-.history-row {
+/* Sidebar history styles */
+.sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 280px;
+  background: var(--bg);
+  border-right: 1px solid var(--line);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 100;
+}
+.sidebar-title {
+  color: var(--nvidia-green);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.sidebar-empty {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 20px;
+  text-align: center;
+}
+.sidebar-run {
+  padding: 12px 10px;
+  background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 10px 12px;
-  background: var(--bg-2);
+  margin-bottom: 10px;
   cursor: pointer;
+  transition: background 0.2s;
 }
-.history-row:hover {
-  border-color: var(--lime-dim);
+.sidebar-run:hover {
   background: var(--panel);
+  border-color: var(--nvidia-green);
 }
-.mono {
+.sidebar-run-id {
+  color: var(--nvidia-green);
   font-family: var(--mono);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.sidebar-run-status {
+  color: var(--muted);
   font-size: 11px;
+}
+.sidebar-run-details {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* Override the header to remove Nebius text */
+.hero .brand-text {
+  color: var(--ink);
+  font-size: 14px;
+}
+.hero .brand-text span {
+  color: var(--nvidia-green);
+  font-weight: 600;
+}
+
+/* Reduce the chips area height when sidebar is visible */
+.hero.chips-sidebar .chips {
+  justify-content: flex-start;
+  margin-top: 16px;
 }
