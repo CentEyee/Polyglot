@@ -1,6 +1,6 @@
 # PolyGlot Refactor AI
 
-An autonomous **C/C++ → Rust** migration agent. It clones a repo, builds an include/call graph, plans a transformation DAG with **NVIDIA Nemotron 3 Ultra**, rewrites translation units in parallel with **Super / Nano** on **Nebius Token Factory**, runs `cargo test` until green, and opens a reviewable pull request.
+An autonomous **C → Rust** migration agent. It clones a repo, builds an include/call graph, plans a transformation DAG with **NVIDIA Nemotron 3 Ultra**, rewrites translation units in parallel with **Super / Nano** on **Nebius Token Factory**, runs `cargo test` until green, and opens a reviewable pull request.
 
 Built for the Nebius × NVIDIA Global AI Hackathon — **Best Apps and Agents**.
 
