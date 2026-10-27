@@ -353,8 +353,9 @@ export default function Home() {
           const row = describe(e);
           if (row) setRows((r) => [...r, row]);
           const s = STAGE_OF[t];
-          if (s !== undefined) setStage((prev) => Math.max(prev, s));
-          if (t === "run.error") setFailed(true);
+          const failedFinish = t === "run.finished" && e.data.report?.status === "failed";
+          if (s !== undefined && !failedFinish) setStage((prev) => Math.max(prev, s));
+          if (t === "run.error") { setFailed(true); setStage((prev) => Math.max(prev, 0)); }
           if (t === "plan.ready") setWaves(e.data.waves || []);
           if (t === "run.finished") {
             src.close();
